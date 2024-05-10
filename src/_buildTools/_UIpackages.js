@@ -13,7 +13,7 @@ module.exports = function(grunt, options) {
 //			special : ['special'],
 //			video : ['video'],
 //			std : ['minimal', 'boxes', 'panels', 'structs', 'titles'],
-			all : ['basics', 'forms', 'lists', 'tables', 'tabs', 'trees', 'specials']
+			all : ['basics', 'forms', 'tables', 'tabs', 'trees', 'specials']
 	}
 	
 	options = options || {};
@@ -58,6 +58,9 @@ module.exports = function(grunt, options) {
 	// some files call this helper to get the list of validators and pass null as UIpackage
 	if (typeof categories[options.UIpackage] !== 'undefined') {
 		categories[options.UIpackage].forEach(function(dir) {
+			// case of empty folders
+			if (!packageTree[dir])
+				return;
 			options.UIpackageList = options.UIpackageList.concat(
 					packageTree[dir].map(function(item) {
 						path = '';
