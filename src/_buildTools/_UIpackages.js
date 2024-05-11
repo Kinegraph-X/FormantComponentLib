@@ -7,12 +7,7 @@ const fs  = require('fs');
 
 module.exports = function(grunt, options) {
 	var categories = {
-//			none : [],
-//			minimal : ['minimal'],		// minimal bundling is broken, don't use until big fix
-//			special : ['special'],
-//			video : ['video'],
-//			std : ['minimal', 'boxes', 'panels', 'structs', 'titles'],
-			all : ['basics', 'forms', 'tables', 'tabs', 'trees', 'specials']
+		all : ['basics', 'forms', 'tables', 'tabs', 'trees', 'specials']
 	}
 	
 	options = options || {};
