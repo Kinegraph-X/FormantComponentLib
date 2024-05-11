@@ -6,7 +6,6 @@
 const fs  = require('fs');
 
 module.exports = function(grunt, options) {
-	console.log('UIPackage called');
 	var categories = {
 //			none : [],
 //			minimal : ['minimal'],		// minimal bundling is broken, don't use until big fix
